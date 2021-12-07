@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // MARK: Stored properties
+    var currentCard: Card = listOfCards.randomElement()!
+    
+    // MARK: Computed properties
     var body: some View {
         VStack(spacing: 25) {
-            Text("What's \"powerhouse\" of a cell?")
+            
+            // Output
+            Text(currentCard.question)
                 .font(.largeTitle)
             
+            // Input
             Button(action: {
                 print("Hi")
             },
@@ -21,9 +29,11 @@ struct ContentView: View {
             })
                 .buttonStyle(.bordered)
             
-            Text("mitochondria")
+            // Output
+            Text(currentCard.answer)
                 .font(.title)
             
+            // Input
             Button(action: {
                 print("Hi")
             },
