@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored properties
-    var currentCard: Card = listOfCards.randomElement()!
+    @State var currentCard: Card = listOfCards.randomElement()!
     
     // MARK: Computed properties
     var body: some View {
@@ -35,7 +35,7 @@ struct ContentView: View {
             
             // Input
             Button(action: {
-                print("Hi")
+                currentCard = listOfCards.randomElement()!
             },
                    label: {
                 Text("Another")
