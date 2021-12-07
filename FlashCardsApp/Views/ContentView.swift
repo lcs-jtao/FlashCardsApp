@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 25) {
             Text("What's \"powerhouse\" of a cell?")
                 .font(.largeTitle)
             
@@ -18,6 +18,17 @@ struct ContentView: View {
             },
                    label: {
                 Text("Check")
+            })
+                .buttonStyle(.bordered)
+            
+            Text("mitochondria")
+                .font(.title)
+            
+            Button(action: {
+                print("Hi")
+            },
+                   label: {
+                Text("Another")
             })
                 .buttonStyle(.bordered)
             
