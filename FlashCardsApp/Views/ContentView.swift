@@ -9,13 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("What's \"powerhouse\" of a cell?")
+                .font(.largeTitle)
+            
+            Button(action: {
+                print("Hi")
+            },
+                   label: {
+                Text("Check")
+            })
+                .buttonStyle(.bordered)
+            
+            Spacer()
+        }
+        .padding()
+        .navigationTitle("Flash Cards")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            ContentView()
+        }
     }
 }
